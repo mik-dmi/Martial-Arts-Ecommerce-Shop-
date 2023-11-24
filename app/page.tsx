@@ -1,17 +1,11 @@
-import {Hero} from '@/components'
+
 import Image from 'next/image'
+import Hero from './components/Hero'
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <div>
       <Hero />
-
-      <div className='mt-12 padding-x padding-y max-width' id='discover'>
-        <div className='home__text-container'>
-          <h1 className='text-4xl font-extrabold'>Available Products</h1>
-          <p>Browse through the best-quality items </p>
-        </div>
-      </div>
-    </main>
+    </div>
   )
 }
