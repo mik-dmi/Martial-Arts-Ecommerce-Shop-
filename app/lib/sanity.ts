@@ -7,8 +7,8 @@ export const client = createClient({
     apiVersion:"2023-11-22",
     useCdn: true,
 });
-const builder = imageUrlBuilder(client)
+const builder = imageUrlBuilder(client);
 
-export function urlFor(source: any){
-    return builder.image(source);
+export function urlFor(source: any) {
+  return builder.image(source);
 }
