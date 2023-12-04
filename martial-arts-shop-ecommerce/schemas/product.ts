@@ -42,5 +42,15 @@ export default {
           },
         ],
       },
+      {
+        name: 'kind',
+        title: 'Product kind',
+        type: 'reference',
+        to: [
+          {
+            type: 'kind',
+          },
+        ],
+      },
     ],
   }
