@@ -1,9 +1,13 @@
 
+import AddToCart from "@/app/components/AddToCart";
+import CheckOut from "@/app/components/CheckOut";
 import ImageGallery from "@/app/components/ImageGallery";
 import { fullProduct } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import { Button } from "@/components/ui/button";
 import { Star, Truck } from "lucide-react";
+import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
+
 
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == "${slug}"][0] {
@@ -14,7 +18,8 @@ async function getData(slug: string) {
           description,
           "slug": slug.current,
           "categoryName": category->name,
-          price_id
+          sku,
+          currency,
       }`;
 
   const data = await client.fetch(query);
@@ -22,14 +27,18 @@ async function getData(slug: string) {
   return data;
 }
 
-export const dynamic = "force-dynamic";
+{/*export const dynamic = "force-dynamic";*/}
+
+
 
 export default async function ProductPge({
   params,
 }: {
   params: { slug: string };
 }) {
+
   const data: fullProduct = await getData(params.slug);
+  
 
   return (
     <div className="bg-white">
@@ -61,10 +70,10 @@ export default async function ProductPge({
               </div>
 
               <div className=" flex items-center gap-3 ">
-                <Button className="rounded-full gap-x-2">
+                <div className="rounded-full gap-x-2">
                   <span className="text-sm ">4.2</span>
                   <Star className="h-5 w-5" />
-                </Button>
+                </div>
 
                 <span className="text-sm text-gray-500 transition duration-100">
                   56 Ratings
@@ -84,8 +93,10 @@ export default async function ProductPge({
               {data.description}
             </p>
             <div>
-              <Button>Add To Bag</Button>
-              <Button variant={"secondary"}>Checkout now</Button>
+              <AddToCart data = {data}/>
+              <CheckOut />
+              
+              
 
             </div>
 

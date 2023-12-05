@@ -14,6 +14,7 @@ const links = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const {cartCount} = useShoppingCart()
 
   return (
     <header className="mb-8 border-b">
@@ -41,6 +42,7 @@ export default function Navbar() {
         <div className="flex divide-x border-r sm:border-l">
           <Button variant={"outline"} className = "flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none">
             <ShoppingBag />
+            <span className="ml-2 text-sm font-bold">{cartCount}</span>
             <span className="hidden text-xs font-semibold text-gray-500 sm:block">Card</span>
           </Button>
         </div>

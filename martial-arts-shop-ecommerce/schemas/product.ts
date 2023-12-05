@@ -33,6 +33,16 @@ export default {
         type: 'number',
       },
       {
+        name: 'sku',
+        title: 'SKU',
+        type: 'string',
+      },
+      {
+        name: 'currency',
+        title: 'Currency',
+        type: 'string',
+      },
+      {
         name: 'category',
         title: 'Product Category',
         type: 'reference',
