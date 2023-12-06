@@ -16,7 +16,7 @@ import { useRouter } from 'next/navigation'
 const ProductSort = () => {
     const router = useRouter()
   return (
-    <Select onValueChange={value => router.replace(value)}>
+    <Select onValueChange={(value) => router.replace(value)}>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Sort By" />
       </SelectTrigger>

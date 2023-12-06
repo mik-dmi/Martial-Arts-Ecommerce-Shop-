@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { urlFor } from "../lib/sanity";
 import { useState } from "react";
+import { shimmer, toBase64 } from "../lib/image"
 
 
 interface iAppProps {
@@ -21,6 +22,8 @@ export default function ImageGallery({ images }: iAppProps) {
         {images.map((image: any, idx: any) => (
           <div key={idx} className="overflow-hidden rounded-lg bg-gray-100">
             <Image
+              placeholder='blur'
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(200,200))}`}
               src={urlFor(image).url()}
               width={200}
               height={200}
@@ -34,6 +37,8 @@ export default function ImageGallery({ images }: iAppProps) {
 
       <div className="relative overflow-hidden rounded-lg bg-gray-100 lg:col-span-4">
         <Image
+          placeholder='blur'
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(500,500))}`}
           src={urlFor(bigImage).url()}
           alt="Photo"
           width={500}

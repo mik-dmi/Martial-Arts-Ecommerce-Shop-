@@ -7,9 +7,9 @@ import { useShoppingCart } from "use-shopping-cart"
 
 
   
-  export default function AddToCart({ data }: fullProduct) { 
+export default function AddToCart({ data }: { data: fullProduct }) {
     const {addItem, incrementItem , cartDetails} = useShoppingCart()
-    const isInCard = !!cartDetails?.[data._id]
+    const isInCard = !!cartDetails?.[data._id];
   
   
     function addToBag(product : fullProduct){

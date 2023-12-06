@@ -8,8 +8,8 @@ import { useShoppingCart } from "use-shopping-cart";
 
 const links = [
   { name: "Home", href: "/" },
-  { name: "Products", href: "/Products" },
-  { name: "About Us", href: "/About" },
+  { name: "Products", href: "/#products-section" },
+  { name: "About Us", href: null }, 
 ];
 
 export default function Navbar() {
@@ -25,9 +25,10 @@ export default function Navbar() {
           </h1>
         </Link>
         <nav className="hidden gap-11 lg:flex 2xl:ml-16">
-          {links.map((link, id) => (
-            <div key={id}>
-              {pathname === link.href ? (
+        {links.map((link, id) => (
+          <div key={id}>
+            {link.href !== null ? (
+              pathname === link.href ? (
                 <Link className="text-lg font-semibold text-primary" href={link.href}>
                   {link.name}
                 </Link>
@@ -35,16 +36,26 @@ export default function Navbar() {
                 <Link href={link.href} className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-primary">
                   {link.name}
                 </Link>
-              )}
-            </div>
-          ))}
+              )
+            ) : (
+              <span className="text-lg font-semibold text-gray-600">
+                {link.name}
+              </span>
+            )}
+          </div>
+        ))}
         </nav>
         <div className="flex divide-x border-r sm:border-l">
           <Link href="/cart">
             <Button variant={"outline"} className = "flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none">
-              <ShoppingBag />
-              <span className="ml-2 text-sm font-bold">{cartCount}</span>
-              <span className="hidden text-xs font-semibold text-gray-500 sm:block">Card</span>
+              <div className = "flex flex-col">
+                <div className="flex ">
+                  <ShoppingBag />
+                  <span className="ml-2 text-sm font-bold self-center">{cartCount}</span>
+                </div>
+                <span className="hidden text-xs font-semibold text-gray-500 sm:block text-justify">Cart</span>
+                
+                </div>
             </Button>
           </Link>
         </div>

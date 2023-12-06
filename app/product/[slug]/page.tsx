@@ -7,6 +7,8 @@ import { client } from "@/app/lib/sanity";
 import { Button } from "@/components/ui/button";
 import { Star, Truck } from "lucide-react";
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
+import RatingButton from "@/app/components/RatingButton";
+import DisplayCurrency from "@/app/components/DisplayCurrency";
 
 
 async function getData(slug: string) {
@@ -60,7 +62,7 @@ export default async function ProductPge({
               <div className="mb-2">
                 <div className="flex items-end gap-2">
                   <span className="text-2xl font-bold text-gray-800 md:text-2xl">
-                    ${data.price}
+                    <DisplayCurrency totalAmount={data.price} />
                   </span>
                 </div>
 
@@ -70,10 +72,7 @@ export default async function ProductPge({
               </div>
 
               <div className=" flex items-center gap-3 ">
-                <div className="rounded-full gap-x-2">
-                  <span className="text-sm ">4.2</span>
-                  <Star className="h-5 w-5" />
-                </div>
+                <RatingButton />
 
                 <span className="text-sm text-gray-500 transition duration-100">
                   56 Ratings
@@ -93,7 +92,7 @@ export default async function ProductPge({
               {data.description}
             </p>
             <div>
-              <AddToCart data = {data}/>
+            <AddToCart data={data}/>
               <CheckOut />
               
               

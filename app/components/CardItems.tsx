@@ -7,7 +7,7 @@ import { Clock, X } from "lucide-react"
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
 import { Product } from "use-shopping-cart/core"
 
-import { shimmer, toBase64 } from "@/lib/image"
+import { shimmer, toBase64 } from "../lib/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { CartItemsEmpty } from "./CartItemsEmpty"
@@ -28,13 +28,15 @@ export function CartItems() {
       {cartItems.map((product, productIdx) => (
         <li key={product.id} className="flex py-6 sm:py-10">
           <div className="shrink-0">
-            {/*<Image
+            <Image
+              placeholder='blur'
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(200,200))}`}
               src={urlFor(product.images[0]).url()}
               alt={"product.name"}
               width={200}
               height={200}
               className="h-24 w-24 rounded-md border-2 border-gray-200 object-cover object-center dark:border-gray-800 sm:h-48 sm:w-48"
-      />*/}
+            />
           </div>
 
           <div className="ml-4 flex flex-1 flex-col justify-between sm:ml-6">

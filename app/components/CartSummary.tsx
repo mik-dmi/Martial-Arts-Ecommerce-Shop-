@@ -39,8 +39,9 @@ const CartSummary = () => {
 
       <div className="mt-6">
         <Button className="w-full">
-          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Loading...
+          {/*<Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          Loading...*/}
+          Checkout
         </Button>
       </div>
     </section>
