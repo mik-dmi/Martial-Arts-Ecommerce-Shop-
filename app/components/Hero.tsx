@@ -1,7 +1,6 @@
 
 import Image from "next/image";
 import { client, urlFor } from "../lib/sanity";
-import Link from "next/link";
 import { shimmer, toBase64 } from "../lib/image"
 
 async function getData() {

@@ -4,9 +4,7 @@ import CheckOut from "@/app/components/CheckOut";
 import ImageGallery from "@/app/components/ImageGallery";
 import { fullProduct } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
-import { Button } from "@/components/ui/button";
-import { Star, Truck } from "lucide-react";
-import { formatCurrencyString, useShoppingCart } from "use-shopping-cart"
+import {Truck } from "lucide-react";
 import RatingButton from "@/app/components/RatingButton";
 import DisplayCurrency from "@/app/components/DisplayCurrency";
 
