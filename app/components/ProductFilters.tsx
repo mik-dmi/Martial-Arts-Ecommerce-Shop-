@@ -8,7 +8,7 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
-import { useSearchParams } from 'next/navigation'
+
   
   const filters = [
     {
