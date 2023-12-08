@@ -3,6 +3,7 @@
 
 import Hero from './components/Hero'
 import ProductsSection from './components/ProductsSection'
+import Footer from './components/Footer';
 import {client} from "./lib/sanity"
 import { simplifiedProduct } from "./interface";
 
@@ -54,6 +55,7 @@ export default async function Page({ searchParams }: Props) {
     <div>
       <Hero />
       <ProductsSection dataProducts = {dataProducts} />
+      <Footer />
     </div>
   )
 }

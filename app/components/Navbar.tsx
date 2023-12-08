@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { useShoppingCart } from "use-shopping-cart";
 
 const links = [
@@ -45,13 +45,16 @@ export default function Navbar() {
           </div>
         ))}
         </nav>
-        <div className="flex divide-x border-r sm:border-l">
+        <div className="flex divide-x sm:border-r sm:border-l">
           <Link href="/cart">
-            <Button variant={"outline"} className = "flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none">
-              <div className = "flex flex-col">
-                <div className="flex ">
-                  <ShoppingBag />
-                  <span className="ml-2 text-sm font-bold self-center">{cartCount}</span>
+            <Button variant={"outline"} className = "flex flex-col border-0 gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none">
+              <div className = "flex flex-col hover:scale-110">
+                <div className="text-gray-600 relative   ">
+                  <ShoppingCart />
+                
+                     <span className={`flex justify-center items-center ${cartCount && cartCount > 0 ? "block" : "hidden"} sm:text-sm text-[0.6rem] absolute left-5 bottom-4 bg-red-600 sm:w-[1.1rem] w-[0.9rem]  sm:h-[1.1rem] h-[0.9rem] text-center font-semibold rounded-full text-white`}>
+                      {cartCount}
+                      </span>
                 </div>
                 <span className="hidden text-xs font-semibold text-gray-500 sm:block text-justify">Cart</span>
                 
