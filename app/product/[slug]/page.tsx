@@ -27,8 +27,6 @@ async function getData(slug: string) {
   return data;
 }
 
-{/*export const dynamic = "force-dynamic";*/}
-
 
 
 export default async function ProductPge({
@@ -60,7 +58,8 @@ export default async function ProductPge({
               <div className="mb-2">
                 <div className="flex items-end gap-2">
                   <span className="text-2xl font-bold text-gray-800 md:text-2xl">
-                    <DisplayCurrency totalAmount={data.price} />
+                   
+                    <DisplayCurrency totalAmount={data.price} currency={data.currency} />
                   </span>
                 </div>
 

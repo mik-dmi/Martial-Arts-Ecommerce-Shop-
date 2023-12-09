@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
         <Link href="/">
           <h1 className="md:text-4xl text-2xl font-bold">
-            Martial <span className="text-primary">Gear</span>
+          <span className="text-primary"> Martial Gear</span>
           </h1>
         </Link>
         <nav className="hidden gap-11 lg:flex 2xl:ml-16">
@@ -29,7 +29,7 @@ export default function Navbar() {
           <div key={id}>
             {link.href !== null ? (
               pathname === link.href ? (
-                <Link className="text-lg font-semibold text-primary" href={link.href}>
+                <Link className="text-lg font-semibold text-gray-900 hover:text-primary" href={link.href}>
                   {link.name}
                 </Link>
               ) : (
@@ -38,7 +38,7 @@ export default function Navbar() {
                 </Link>
               )
             ) : (
-              <span className="text-lg font-semibold text-gray-600">
+              <span className="text-lg font-semibold text-gray-600 hover:text-primary">
                 {link.name}
               </span>
             )}

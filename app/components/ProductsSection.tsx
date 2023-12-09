@@ -51,7 +51,7 @@ export default function ProductsSection({ dataProducts }: { dataProducts: simpli
 
                     <div className="mt-4 flex justify-between">
                     <div>
-                        <h3 className="text-sm text-gray-700">
+                        <h3 className="text-sm text-gray-700 hover:text-primary">
                         <Link href={`/product/${product.slug}`}>
                             {product.name}
                         

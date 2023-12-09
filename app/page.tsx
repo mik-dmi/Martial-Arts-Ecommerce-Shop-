@@ -1,6 +1,3 @@
-
-
-
 import Hero from './components/Hero'
 import ProductsSection from './components/ProductsSection'
 import Footer from './components/Footer';
@@ -32,12 +29,12 @@ interface Props {
 }
 
 export default async function Page({ searchParams }: Props) {
-  const { date = "desc", price, category, kind } = searchParams;
-  console.log("Original date:", date);
+  const { date = "asc", price, category, kind } = searchParams;
+  /*console.log("Original date:", date);*/
   const priceOrder = price ? `| order(price ${price})` : "";
-  console.log("Price order:", priceOrder);
+  /*console.log("Price order:", priceOrder);*/
   const dateOrder = date ? `| order(_createdAt ${date})` : "";
-  console.log("Date order:", dateOrder);
+  /*console.log("Date order:", dateOrder);*/
   const order = `${dateOrder}${priceOrder}`;
   
 
@@ -47,9 +44,9 @@ export default async function Page({ searchParams }: Props) {
   const filter = `*[${productFilter}${categoryFilter}${typeFilter}]`;
 
   const dataProducts: simplifiedProduct[] = await getData(filter, order);
-  console.log("dataProducts =========================================================================================")
+  /*console.log("dataProducts =========================================================================================")
   console.log(dataProducts)
-  console.log(filter , order )
+  console.log(filter , order )*/
 
   return (
     <div>

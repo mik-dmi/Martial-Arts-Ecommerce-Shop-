@@ -16,16 +16,16 @@ import { useRouter } from 'next/navigation'
 const ProductSort = () => {
     const router = useRouter()
   return (
-    <Select onValueChange={(value) => router.replace(value)}>
+    <Select onValueChange={(value) => router.replace( value +'#products-section'   )}>
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Sort By" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Sort By</SelectLabel>
-          <SelectItem value="/?date=desc">Newest</SelectItem>
-          <SelectItem value="/?price=asc">Price, low to high</SelectItem>
-          <SelectItem value="/?price=desc">Price, high to low</SelectItem>
+          <SelectItem value="/?date=desc" className='cursor-pointer '><span className='hover:text-primary'>Newest</span></SelectItem>
+          <SelectItem value="/?price=asc" className='cursor-pointer'><span className='hover:text-primary'>Price, low to high</span></SelectItem>
+          <SelectItem value="/?price=desc" className='cursor-pointer'><span className='hover:text-primary'>Price, high to low</span></SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

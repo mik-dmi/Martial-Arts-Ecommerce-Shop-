@@ -44,7 +44,7 @@ export function CartItems() {
               <div>
                 <div className="flex justify-between">
                   <h3 className="text-sm">
-                    <Link href={`/products/${product.slug}`} className="font-medium">
+                    <Link href={`/product/${product.slug}`} className="font-medium">
                       {product.name}
                     </Link>
                   </h3>
