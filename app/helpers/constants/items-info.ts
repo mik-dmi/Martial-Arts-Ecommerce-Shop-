@@ -1,0 +1,73 @@
+export const itemsInfo = [
+    {
+      "name": "Focus Mitts",
+      "slug": "focus-mitts",
+      "categoryName": "Kickboxing",
+      "_createdAt": "2023-11-30T16:31:21Z",
+      "price": 29.99,
+    },
+    {
+      "categoryName": "Kickboxing",
+      "_createdAt": "2023-11-30T16:43:00Z",
+      "price": 14.99,
+      "name": "Jump Rope",
+      "slug": "jump-rope",
+    },
+    {
+      "_createdAt": "2023-11-30T16:20:00Z",
+      "price": 69.99,
+      "name": "Karate Kata Kimono",
+      "slug": "karate-kata-kimono",
+      "categoryName": "Karaté",
+    },
+    {
+      "slug": "shin-guards",
+      "categoryName": "Kickboxing",
+      "_createdAt": "2023-11-30T16:13:26Z",
+      "price": 29.99,
+      "name": "Shin Guards",
+    },
+    {
+      "name": "Custom-Fit Mouth Guard",
+      "slug": "mouth-guard",
+      "categoryName": "Kickboxing",
+      "_createdAt": "2023-11-30T18:36:02Z",
+      "price": 14.99,
+    },
+    {
+      "categoryName": "Kickboxing",
+      "_createdAt": "2023-11-30T16:43:15Z",
+      "price": 9.00,
+      "name": "Hand Wraps",
+      "slug": "hand-wraps",
+    },
+    {
+      "slug": "boxing-gloves",
+      "categoryName": "Kickboxing",
+      "_createdAt": "2023-11-23T01:45:04Z",
+      "price": 59.99,
+      "name": "Boxing Gloves",
+    },
+    {
+      "_createdAt": "2023-11-30T18:33:26Z",
+      "price": 29.99,
+      "name": "Jiu-Jitsu Rash Guard",
+      "slug": "jiu-jitsu-rash-guard",
+      "categoryName": "Jiu-Jitsu",
+    },
+    {
+      "_createdAt": "2023-11-30T17:43:42Z",
+      "price": 34.99,
+      "name": "Speed Bag",
+      "slug": "speed-bag",
+      "categoryName": "Kickboxing",
+    },
+    {
+      "categoryName": "Jiu-Jitsu",
+      "_createdAt": "2023-11-30T17:33:57Z",
+      "price": 89.99,
+      "name": "Jiu-Jitsu Gi (Kimono)",
+      "slug": "jiu-jitsu-gi-kimono",
+    },
+  ];
+  

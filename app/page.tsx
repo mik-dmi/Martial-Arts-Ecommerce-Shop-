@@ -1,8 +1,9 @@
 import Hero from './components/Hero'
-import ProductsSection from './components/ProductsSection'
-import Footer from './components/Footer';
+import ProductsSection from './components/product_grid/ProductsSection'
+
 import {client} from "./lib/sanity"
 import { simplifiedProduct } from "./interface";
+import Footer from './components/Footer';
 
 async function getData(filter: string, order: string) {
   const query = `${filter}  ${order}{

@@ -2,11 +2,11 @@
 import ProductSort from './ProductSort'
 
 import Image from "next/image";
-import { simplifiedProduct } from "../interface";
+import { simplifiedProduct } from "../../interface";
 import Link from "next/link"
 import ProductFilters from './ProductFilters';
-import DisplayCurrency from './DisplayCurrency';
-import { shimmer, toBase64 } from "../lib/image"
+import DisplayCurrency from '../DisplayCurrency';
+import { shimmer, toBase64 } from "../../lib/image"
 
 
 

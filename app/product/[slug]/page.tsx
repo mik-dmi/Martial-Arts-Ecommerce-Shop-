@@ -39,7 +39,7 @@ export default async function ProductPge({
   
 
   return (
-    <div className="bg-white">
+    <section className="bg-white min-h-[90%] ">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
         <div className="grid gap-8 md:grid-cols-2">
           <ImageGallery images={data.images} />
@@ -99,6 +99,6 @@ export default async function ProductPge({
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
